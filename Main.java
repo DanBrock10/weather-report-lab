@@ -132,7 +132,33 @@ public class Main {
  
  
         // TODO: Write if, if-else, or nested if statements to display tips
- 
+     // STEP 4: Weather tips using conditional statements
+
+     String tips = "";
+
+     //UV index advice
+     if (uvIndex >= 6) {
+         tips += "- UV level is high: use sunscreen.\n";
+     } else {
+         tips += "- UV level is low.\n";
+     }
+
+     //Rain advice
+     if (precipitation >= 50) {
+         tips += "- High chance of rain: bring umbrella.\n";
+     } else {
+         tips += "- Low chance of rain.\n";
+     }
+
+     //Wind advice
+     if (windSpeed > 40) {
+         tips += "- High wind conditions.\n";
+     } else if (windSpeed >= 20) {
+         tips += "- Moderate wind.\n";
+     } else {
+         tips += "- Light wind.\n";
+     }
+
  
         /*
         STEP 5: Create a fullReport String
