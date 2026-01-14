@@ -168,7 +168,20 @@ public class Main {
  
  
         // TODO: Construct your full weather report here
- 
+      
+      String fullReport = "";
+       fullReport += "-----------------------------\n";
+       fullReport += "Weather Report\n";
+       fullReport += "-----------------------------\n";
+       fullReport += "Conditions: " + conditions + "\n";
+       fullReport += "Chance of precipitation: " + precipitation + "%\n";
+       fullReport += "Wind speed: " + windSpeed + " km/h\n";
+       fullReport += "High temperature: " + highTemp + "°C (rounded: " + highTempInt + "°C)\n";
+       fullReport += "Low temperature: " + lowTemp + "°C (rounded: " + lowTempInt + "°C)\n";
+       fullReport += "UV Index: " + uvIndex + "\n\n";
+       fullReport += "Weather Tips:\n";
+       fullReport += tips;
+       fullReport += "-----------------------------\n";
  
         /*
         STEP 6: Print the full weather report
