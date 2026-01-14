@@ -186,7 +186,11 @@ public class Main {
         /*
         STEP 6: Print the full weather report
         */
- 
+
+       //Display the full weather report
+      System.out.println();
+      System.out.println(fullReport);
+
  
         // TODO: Output your report using System.out.println()
  
