@@ -117,7 +117,10 @@ public class Main {
  
  
         // TODO: Apply typecasting where necessary
- 
+
+       //Convert double temperatures to int
+     int highTempInt = (int) highTemp;
+     int lowTempInt = (int) lowTemp;
  
         /*
         STEP 4: Conditional statements
