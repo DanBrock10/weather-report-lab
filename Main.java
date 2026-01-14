@@ -30,12 +30,12 @@ public class Main {
  
  
         // TODO: Declare your variables here
-     String conditions;// words like sunny or cloudy
-     int precipitation;// percent (0–100)
-     int windSpeed;// km/h
-     double highTemp;// high temperature
-     double lowTemp;// low temperature
-     int uvIndex;// UV index number
+     String conditions; //words like sunny or cloudy
+     int precipitation; //percent (0–100)
+     int windSpeed; //km/h
+     double highTemp; //high temperature
+     double lowTemp; //low temperature
+     int uvIndex; //UV index number
 
  
         /*
@@ -48,7 +48,67 @@ public class Main {
  
         // TODO: Prompt user and read input
         // TODO: Use loops to validate high/low temperatures and UV index
- 
+
+        
+     input.nextLine();
+
+     //Ask user to describe the weather
+     System.out.print("Describe today's weather (ex: sunny, cloudy): ");
+     conditions = input.nextLine();
+
+
+     //Ask for chance of precipitation
+     do {
+     System.out.print("Chance of precipitation (0-100): ");
+     precipitation = input.nextInt();
+
+     //If number is outside range, show error message
+     if (precipitation < 0 || precipitation > 100) {
+        System.out.println("Invalid input. Enter a value between 0 and 100.");
+     }
+     } while (precipitation < 0 || precipitation > 100);
+
+
+     //Ask for wind speed
+     do {
+     System.out.print("Wind speed (km/h): ");
+     windSpeed = input.nextInt();
+
+     //Wind speed cannot be less than 0
+     if (windSpeed < 0) {
+        System.out.println("Wind speed cannot be negative.");
+     }
+     } while (windSpeed < 0);
+
+
+     //Ask for the daily high temperature
+     System.out.print("Daily high temperature (°C): ");
+     highTemp = input.nextDouble();
+
+
+     //Ask for daily low temperature
+     do {
+     System.out.print("Daily low temperature (°C): ");
+     lowTemp = input.nextDouble();
+
+     //Low temperature must be less than or equal to high temperature
+     if (lowTemp > highTemp) {
+        System.out.println("Low temperature cannot be higher than the high temperature.");
+     }
+     } while (lowTemp > highTemp);
+
+
+     //Ask for UV index
+     do {
+     System.out.print("UV Index (0-20): ");
+     uvIndex = input.nextInt();
+
+     //UV index must be within 0-20
+     if (uvIndex < 0 || uvIndex > 20) {
+        System.out.println("Invalid UV index. Enter a number between 0 and 20.");
+     }
+     } while (uvIndex < 0 || uvIndex > 20);
+
  
         /*
         STEP 3: Typecasting (if needed)
